@@ -16,6 +16,9 @@
         <p>doubleCount: {{ doubleCountRef }}</p>
     </div>
 
+    <div>
+        <button @click="resetStore">Reset Store</button>
+    </div>
 </template>
 
 <script setup>
@@ -36,6 +39,10 @@ setTimeout(() => {
 }, 1000);
 
 const doubleValue = computed(() => store.doubleCount);
+
+const resetStore = () => {
+    store.$reset();
+}
 
 </script>
 

@@ -14,7 +14,12 @@ export const useCounterStore = defineStore("counter", () => {
     console.log(count.value);
   }
 
+  function $reset() {
+    name.value = 'Default Name';
+    count.value = 0;
+  }
+
   return {
-    count, name, doubleCount, increment
+    count, name, doubleCount, increment, $reset
   }
  });
