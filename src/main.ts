@@ -20,8 +20,6 @@ export function createApp() {
 
     const commonStore = useCommonStore(pinia);
 
-    console.log(pinia);
-
     app.use(router);
     app.use(pinia);
 
