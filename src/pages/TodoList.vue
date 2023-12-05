@@ -36,7 +36,7 @@
 </template>
 
 <script setup>
-import {ref, reactive, computed} from 'vue';
+import {ref, reactive, computed, onMounted, watch} from 'vue';
 
 const todo = ref('');
 const showCompleted = ref(false);
@@ -44,6 +44,14 @@ const showCompleted = ref(false);
 const todoList = ref([]);
 
 let id = 0;
+
+onMounted(() => {
+    console.log('hi');
+})
+
+watch(() => todoList.value, () => {
+    window.localStorage.setItem('todoList', JSON.stringify(todoList.value));
+});
 
 const filteredTodoList = computed(() => {
     let arr = todoList.value;
