@@ -1,14 +1,8 @@
 <template>
-    <h1>Home</h1>
-    <p>
-        홈
-    </p>
+  <h1>Home</h1>
+  <p>홈</p>
 </template>
 
-<script setup>
+<script setup></script>
 
-</script>
-
-<style scoped>
-
-</style>
+<style scoped></style>
